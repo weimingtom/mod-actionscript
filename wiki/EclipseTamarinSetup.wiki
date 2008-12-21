@@ -37,3 +37,5 @@ MMgc/GC.cpp: line 1298
 			if (shiftAmount)
 				memset(dst, 0, shiftAmount);
 }}}
+
+Whenever you change something in your shell_toplevel.as, and accordingly, in your c++ classes, run shell_toplevel.py. This will generate the needed c++ link code and also the .abc native libraries thet the compiler uses
