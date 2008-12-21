@@ -1,21 +1,19 @@
 #summary How to edit and compile Tamarin and mod-actionscript using Eclipse CDT
 
-= Introduction =
+= Eclipse CDT setup for Tamarin =
 
 You can very well compile Tamarin without any IDE, but when it comes to edit the code, you should consider using one that provides code completion. Here are the settings for Eclipse CDT
 
 
-= Details =
+First, install Eclipse + CDT, mercurial, zlib1g-dev
 
-install Eclipse + CDT
-install mercurial
-install zlib1g-dev
+Now, inside Eclipse
 
- * create "make c++ project"
+ * create a "make c++ project"
 
- * copy tamarin-central inside and add it as source folder
+ * copy `tamarin-central` inside and set it as source folder
 
- * create obj-debug dir
+ * create `obj-debug dir` in the root of the project
 
  * run configuration script:
 {{{
