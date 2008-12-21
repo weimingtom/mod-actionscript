@@ -1,4 +1,4 @@
-#summary How to edit and compile Tamarin and mod-actionscript using Eclipse CDT
+#summary How to edit and compile Tamarin using Eclipse CDT
 
 = Eclipse CDT setup for Tamarin =
 
