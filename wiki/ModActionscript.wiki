@@ -1,0 +1,13 @@
+#summary mod_actionscript (fcgi for now) setup for Eclipse CDT
+
+= Setup mod_actionscript in Eclipse CDT =
+
+First, follow TamarinEclipseCDTSetup instructions.
+
+Then:
+
+ * apt-get install zlib1g-dev
+ * apt-get install libapache2-mod-fcgid
+ * apt-get install libfcgi-dev
+ * apt-get install libmysqlclient15-dev
+ * Get mysqlwrapped: this one will be removed in future. Compile and install in a system accessible location (unlike the defaults). I'll be back with either an alternate solution or details on how to use this library
