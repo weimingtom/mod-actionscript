@@ -18,7 +18,8 @@ Now, inside Eclipse
  * run configuration script:
 {{{
 $ cd obj-debug
-$ ../tamarin-central/configure --enable-shell --enable-debugger
+$ chmod +x ../tamarin-central/configure.py
+$ ../tamarin-central/configure.py --enable-shell --enable-debugger
 }}}
 
 CDT Project Settings (where tamarin-fcgi is the project name)
