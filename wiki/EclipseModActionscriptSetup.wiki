@@ -13,7 +13,7 @@ Then:
  * Get mysqlwrapped: this one will be removed in future. Compile and install in a system accessible location (unlike the defaults). I'll be back with either an alternate solution or details on how to use this library
 
 
-fcgishell directory inside tamarin-central, under your project
+copy fcgishell directory inside tamarin-central, under your project
 
 edit tamarin-central/manifest.mk:
 change line:
