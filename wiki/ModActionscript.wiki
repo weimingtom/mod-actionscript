@@ -2,7 +2,7 @@
 
 = Setup mod_actionscript in Eclipse CDT =
 
-First, follow TamarinEclipseCDTSetup instructions.
+First, follow TamarinEclipseSetup instructions.
 
 Then:
 
