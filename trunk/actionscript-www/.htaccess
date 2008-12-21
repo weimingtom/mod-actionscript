@@ -1,8 +1,9 @@
 
 AddHandler fcgid-script .abc
-FCGIWrapper /home/victor/TamarinServer/workspace/tamarin-fcgi/obj-debug/fcgishell/fcgishell .abc
 
-#SetHandler fcgid-script
+#update this path according to your setup
+#you can place the executable fcgishell anywhere on your server
+FCGIWrapper /home/victor/TamarinServer/workspace/tamarin-fcgi/obj-debug/fcgishell/fcgishell .abc
 Options +ExecCGI
 
 
