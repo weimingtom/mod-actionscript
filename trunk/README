@@ -56,4 +56,4 @@ copy actionscript-www under your webroot
 edit the .htaccess file according to your setup
 
 
-point your browser to the helo.abc file
+point your browser to "helo.abc" file
