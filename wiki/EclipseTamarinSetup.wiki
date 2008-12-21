@@ -21,8 +21,8 @@ $ cd obj-debug
 $ ../tamarin-central/configure --enable-shell --enable-debugger
 }}}
 
-CDT Project Settings
-  - C/C++ Build -> Build directory: ${workspace_loc:/tamarin/obj-debug}
+CDT Project Settings (where tamarin-fcgi is the project name)
+  - C/C++ Build -> Build directory: ${workspace_loc:/tamarin-fcgi/obj-debug} 
 
 Hit the hammer icon in the toolbar to build
 
