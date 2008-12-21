@@ -3,4 +3,5 @@
 = Introduction =
 
 Current version: 3
-Previously developed by Macromedia, now Adobe
+
+Previously developed by Macromedia, now by Adobe
