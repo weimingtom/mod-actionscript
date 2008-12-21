@@ -22,7 +22,7 @@ $ ../tamarin-central/configure --enable-shell --enable-debugger
 }}}
 
 CDT Project Settings
-  - Build dir: ${workspace_loc:/tamarin/obj-debug}
+  - C/C++ Build -> Build directory: ${workspace_loc:/tamarin/obj-debug}
 
 Hit the hammer icon in the toolbar to build
 
