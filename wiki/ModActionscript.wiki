@@ -11,3 +11,16 @@ Then:
  * apt-get install libfcgi-dev
  * apt-get install libmysqlclient15-dev
  * Get mysqlwrapped: this one will be removed in future. Compile and install in a system accessible location (unlike the defaults). I'll be back with either an alternate solution or details on how to use this library
+
+
+fcgishell directory inside tamarin-central, under your project
+
+edit tamarin-central/manifest.mk:
+change line:
+`$(call RECURSE_DIRS,shell)`
+to:
+`$(call RECURSE_DIRS,fcgishell)`
+
+Build the project (click the hammer icon in CDT toolbar or press Ctrl+B - this runs make in your obj directory)
+
+the executable is obj-debug/fcgishell/fcgishell
