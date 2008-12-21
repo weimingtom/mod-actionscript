@@ -10,4 +10,4 @@ Language Reference
 http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/
 
 _Note:_
-  mod-actionscript too uses a different set of predefined native classes. Reference for these classes will be added here
+ mod-actionscript too uses a different set of predefined native classes. Reference for these classes will be added here
