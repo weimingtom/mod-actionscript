@@ -23,4 +23,8 @@ to:
 
 Build the project (click the hammer icon in CDT toolbar or press Ctrl+B - this runs make in your obj directory)
 
-the executable is obj-debug/fcgishell/fcgishell
+the executable is `obj-debug/fcgishell/fcgishell`
+
+
+
+Whenever you change something in your `shell_toplevel.as`, and accordingly, in your c++ native classes, run shell_toplevel.py. This will generate the needed c++ link code (shell_toplevel.h and shell_toplevel.cpp) and also the .abc native libraries thet the compiler uses. You need to have asc.jar in tamarin-central/utils for this.
