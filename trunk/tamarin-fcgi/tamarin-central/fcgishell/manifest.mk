@@ -26,7 +26,7 @@ fcgishell_CXXSRCS := $(shell_CXXSRCS) \
   $(curdir)/../shell/FileClass.cpp \
   $(curdir)/../shell/FileInputStream.cpp \
   $(curdir)/../shell/StringBuilderClass.cpp \
-  $(curdir)/../shell/SystemClass.cpp \
+  $(curdir)/SystemClass.cpp \
   $(curdir)/../extensions/DictionaryGlue.cpp \
   $(curdir)/../extensions/SamplerScript.cpp \
   $(curdir)/../extensions/Selftest.cpp \

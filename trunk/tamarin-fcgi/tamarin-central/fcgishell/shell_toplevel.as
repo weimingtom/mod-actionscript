@@ -163,5 +163,21 @@ package db {
 	{
 		public native static function connect(host:String, db:String, user:String, pass:String):Boolean;
 		public native static function fetch(sql:String):Array
+		//public native static function print(text:String):void
+	}
+}
+
+
+package http
+{
+	import avmplus.System;
+	public function out(s:String):void
+	{
+		System.write(s);
+	}
+
+	public function simpleHeader():void
+	{
+		System.write('Content-type: text/html; charset=utf-8\r\n\r\n');
 	}
 }

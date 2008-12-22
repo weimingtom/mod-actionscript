@@ -31,6 +31,8 @@ namespace avmshell
     	bool connect(Stringp host, Stringp db, Stringp user, Stringp pass);
     	ArrayObject* fetch(Stringp sql);
 
+    	//void print(Stringp s);
+
     private:
     	std::string _s(Stringp s);
     	Database* db;

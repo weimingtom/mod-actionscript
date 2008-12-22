@@ -60,104 +60,104 @@ const uint32_t abcclass_flash_trace_Trace = 13;
 const uint32_t abcclass_flash_utils_Dictionary = 14;
 const uint32_t abcclass_flash_utils_Endian = 15;
 /* methods */
-const uint32_t avmplus_System_exit = 13;
-const uint32_t avmplus_System_exec = 14;
-const uint32_t avmplus_System_getAvmplusVersion = 15;
-const uint32_t avmplus_System_trace = 16;
-const uint32_t avmplus_System_write = 17;
-const uint32_t avmplus_System_debugger = 18;
-const uint32_t avmplus_System_isDebugger = 19;
-const uint32_t avmplus_System_getTimer = 20;
-const uint32_t avmplus_System_private_getArgv = 21;
-const uint32_t avmplus_System_readLine = 22;
-const uint32_t avmplus_System_totalMemory_get = 23;
-const uint32_t avmplus_System_freeMemory_get = 24;
-const uint32_t avmplus_System_privateMemory_get = 25;
-const uint32_t avmplus_System_ns_example_nstest = 26;
-const uint32_t avmplus_System_isGlobal = 27;
-const uint32_t avmplus_File_exists = 30;
-const uint32_t avmplus_File_read = 31;
-const uint32_t avmplus_File_write = 32;
-const uint32_t db_MySQL_connect = 41;
-const uint32_t db_MySQL_fetch = 42;
-const uint32_t avmplus_Domain_currentDomain_get = 46;
-const uint32_t avmplus_Domain_MIN_DOMAIN_MEMORY_LENGTH_get = 47;
-const uint32_t avmplus_Domain_private_init = 48;
-const uint32_t avmplus_Domain_loadBytes = 50;
-const uint32_t avmplus_Domain_getClass = 51;
-const uint32_t avmplus_Domain_domainMemory_get = 53;
-const uint32_t avmplus_Domain_domainMemory_set = 54;
-const uint32_t avmplus_StringBuilder_append = 58;
-const uint32_t avmplus_StringBuilder_capacity_get = 59;
-const uint32_t avmplus_StringBuilder_charAt = 60;
-const uint32_t avmplus_StringBuilder_charCodeAt = 61;
-const uint32_t avmplus_StringBuilder_ensureCapacity = 62;
-const uint32_t avmplus_StringBuilder_indexOf = 63;
-const uint32_t avmplus_StringBuilder_insert = 64;
-const uint32_t avmplus_StringBuilder_lastIndexOf = 65;
-const uint32_t avmplus_StringBuilder_length_get = 66;
-const uint32_t avmplus_StringBuilder_length_set = 67;
-const uint32_t avmplus_StringBuilder_remove = 68;
-const uint32_t avmplus_StringBuilder_removeCharAt = 69;
-const uint32_t avmplus_StringBuilder_replace = 70;
-const uint32_t avmplus_StringBuilder_reverse = 71;
-const uint32_t avmplus_StringBuilder_setCharAt = 72;
-const uint32_t avmplus_StringBuilder_substring = 73;
-const uint32_t avmplus_StringBuilder_toString = 74;
-const uint32_t avmplus_StringBuilder_trimToSize = 75;
-const uint32_t flash_utils_ByteArray_readFile = 78;
-const uint32_t flash_utils_ByteArray_writeFile = 79;
-const uint32_t flash_utils_ByteArray_readBytes = 80;
-const uint32_t flash_utils_ByteArray_writeBytes = 81;
-const uint32_t flash_utils_ByteArray_writeBoolean = 82;
-const uint32_t flash_utils_ByteArray_writeByte = 83;
-const uint32_t flash_utils_ByteArray_writeShort = 84;
-const uint32_t flash_utils_ByteArray_writeInt = 85;
-const uint32_t flash_utils_ByteArray_writeUnsignedInt = 86;
-const uint32_t flash_utils_ByteArray_writeFloat = 87;
-const uint32_t flash_utils_ByteArray_writeDouble = 88;
-const uint32_t flash_utils_ByteArray_writeUTF = 89;
-const uint32_t flash_utils_ByteArray_writeUTFBytes = 90;
-const uint32_t flash_utils_ByteArray_readBoolean = 91;
-const uint32_t flash_utils_ByteArray_readByte = 92;
-const uint32_t flash_utils_ByteArray_readUnsignedByte = 93;
-const uint32_t flash_utils_ByteArray_readShort = 94;
-const uint32_t flash_utils_ByteArray_readUnsignedShort = 95;
-const uint32_t flash_utils_ByteArray_readInt = 96;
-const uint32_t flash_utils_ByteArray_readUnsignedInt = 97;
-const uint32_t flash_utils_ByteArray_readFloat = 98;
-const uint32_t flash_utils_ByteArray_readDouble = 99;
-const uint32_t flash_utils_ByteArray_readUTF = 100;
-const uint32_t flash_utils_ByteArray_readUTFBytes = 101;
-const uint32_t flash_utils_ByteArray_length_get = 102;
-const uint32_t flash_utils_ByteArray_length_set = 103;
-const uint32_t flash_utils_ByteArray_private_zlib_compress = 104;
-const uint32_t flash_utils_ByteArray_private_zlib_uncompress = 106;
-const uint32_t flash_utils_ByteArray_private__toString = 108;
-const uint32_t flash_utils_ByteArray_bytesAvailable_get = 110;
-const uint32_t flash_utils_ByteArray_position_get = 111;
-const uint32_t flash_utils_ByteArray_position_set = 112;
-const uint32_t flash_utils_ByteArray_endian_get = 113;
-const uint32_t flash_utils_ByteArray_endian_set = 114;
-const uint32_t flash_sampler_isGetterSetter = 117;
-const uint32_t flash_sampler__getInvocationCount = 118;
-const uint32_t flash_sampler_getSampleCount = 122;
-const uint32_t flash_sampler_getSamples = 123;
-const uint32_t flash_sampler_getMemberNames = 124;
-const uint32_t flash_sampler_getSize = 125;
-const uint32_t flash_sampler__setSamplerCallback = 126;
-const uint32_t flash_sampler_sampleInternalAllocs = 129;
-const uint32_t flash_sampler_pauseSampling = 130;
-const uint32_t flash_sampler_stopSampling = 131;
-const uint32_t flash_sampler_startSampling = 132;
-const uint32_t flash_sampler_clearSamples = 133;
-const uint32_t flash_sampler_NewObjectSample_object_get = 140;
-const uint32_t flash_sampler_NewObjectSample_size_get = 141;
-const uint32_t flash_trace_Trace_setLevel = 147;
-const uint32_t flash_trace_Trace_getLevel = 148;
-const uint32_t flash_trace_Trace_setListener = 149;
-const uint32_t flash_trace_Trace_getListener = 150;
-const uint32_t flash_utils_Dictionary_private_init = 154;
+const uint32_t avmplus_System_exit = 15;
+const uint32_t avmplus_System_exec = 16;
+const uint32_t avmplus_System_getAvmplusVersion = 17;
+const uint32_t avmplus_System_trace = 18;
+const uint32_t avmplus_System_write = 19;
+const uint32_t avmplus_System_debugger = 20;
+const uint32_t avmplus_System_isDebugger = 21;
+const uint32_t avmplus_System_getTimer = 22;
+const uint32_t avmplus_System_private_getArgv = 23;
+const uint32_t avmplus_System_readLine = 24;
+const uint32_t avmplus_System_totalMemory_get = 25;
+const uint32_t avmplus_System_freeMemory_get = 26;
+const uint32_t avmplus_System_privateMemory_get = 27;
+const uint32_t avmplus_System_ns_example_nstest = 28;
+const uint32_t avmplus_System_isGlobal = 29;
+const uint32_t avmplus_File_exists = 32;
+const uint32_t avmplus_File_read = 33;
+const uint32_t avmplus_File_write = 34;
+const uint32_t db_MySQL_connect = 43;
+const uint32_t db_MySQL_fetch = 44;
+const uint32_t avmplus_Domain_currentDomain_get = 48;
+const uint32_t avmplus_Domain_MIN_DOMAIN_MEMORY_LENGTH_get = 49;
+const uint32_t avmplus_Domain_private_init = 50;
+const uint32_t avmplus_Domain_loadBytes = 52;
+const uint32_t avmplus_Domain_getClass = 53;
+const uint32_t avmplus_Domain_domainMemory_get = 55;
+const uint32_t avmplus_Domain_domainMemory_set = 56;
+const uint32_t avmplus_StringBuilder_append = 60;
+const uint32_t avmplus_StringBuilder_capacity_get = 61;
+const uint32_t avmplus_StringBuilder_charAt = 62;
+const uint32_t avmplus_StringBuilder_charCodeAt = 63;
+const uint32_t avmplus_StringBuilder_ensureCapacity = 64;
+const uint32_t avmplus_StringBuilder_indexOf = 65;
+const uint32_t avmplus_StringBuilder_insert = 66;
+const uint32_t avmplus_StringBuilder_lastIndexOf = 67;
+const uint32_t avmplus_StringBuilder_length_get = 68;
+const uint32_t avmplus_StringBuilder_length_set = 69;
+const uint32_t avmplus_StringBuilder_remove = 70;
+const uint32_t avmplus_StringBuilder_removeCharAt = 71;
+const uint32_t avmplus_StringBuilder_replace = 72;
+const uint32_t avmplus_StringBuilder_reverse = 73;
+const uint32_t avmplus_StringBuilder_setCharAt = 74;
+const uint32_t avmplus_StringBuilder_substring = 75;
+const uint32_t avmplus_StringBuilder_toString = 76;
+const uint32_t avmplus_StringBuilder_trimToSize = 77;
+const uint32_t flash_utils_ByteArray_readFile = 80;
+const uint32_t flash_utils_ByteArray_writeFile = 81;
+const uint32_t flash_utils_ByteArray_readBytes = 82;
+const uint32_t flash_utils_ByteArray_writeBytes = 83;
+const uint32_t flash_utils_ByteArray_writeBoolean = 84;
+const uint32_t flash_utils_ByteArray_writeByte = 85;
+const uint32_t flash_utils_ByteArray_writeShort = 86;
+const uint32_t flash_utils_ByteArray_writeInt = 87;
+const uint32_t flash_utils_ByteArray_writeUnsignedInt = 88;
+const uint32_t flash_utils_ByteArray_writeFloat = 89;
+const uint32_t flash_utils_ByteArray_writeDouble = 90;
+const uint32_t flash_utils_ByteArray_writeUTF = 91;
+const uint32_t flash_utils_ByteArray_writeUTFBytes = 92;
+const uint32_t flash_utils_ByteArray_readBoolean = 93;
+const uint32_t flash_utils_ByteArray_readByte = 94;
+const uint32_t flash_utils_ByteArray_readUnsignedByte = 95;
+const uint32_t flash_utils_ByteArray_readShort = 96;
+const uint32_t flash_utils_ByteArray_readUnsignedShort = 97;
+const uint32_t flash_utils_ByteArray_readInt = 98;
+const uint32_t flash_utils_ByteArray_readUnsignedInt = 99;
+const uint32_t flash_utils_ByteArray_readFloat = 100;
+const uint32_t flash_utils_ByteArray_readDouble = 101;
+const uint32_t flash_utils_ByteArray_readUTF = 102;
+const uint32_t flash_utils_ByteArray_readUTFBytes = 103;
+const uint32_t flash_utils_ByteArray_length_get = 104;
+const uint32_t flash_utils_ByteArray_length_set = 105;
+const uint32_t flash_utils_ByteArray_private_zlib_compress = 106;
+const uint32_t flash_utils_ByteArray_private_zlib_uncompress = 108;
+const uint32_t flash_utils_ByteArray_private__toString = 110;
+const uint32_t flash_utils_ByteArray_bytesAvailable_get = 112;
+const uint32_t flash_utils_ByteArray_position_get = 113;
+const uint32_t flash_utils_ByteArray_position_set = 114;
+const uint32_t flash_utils_ByteArray_endian_get = 115;
+const uint32_t flash_utils_ByteArray_endian_set = 116;
+const uint32_t flash_sampler_isGetterSetter = 119;
+const uint32_t flash_sampler__getInvocationCount = 120;
+const uint32_t flash_sampler_getSampleCount = 124;
+const uint32_t flash_sampler_getSamples = 125;
+const uint32_t flash_sampler_getMemberNames = 126;
+const uint32_t flash_sampler_getSize = 127;
+const uint32_t flash_sampler__setSamplerCallback = 128;
+const uint32_t flash_sampler_sampleInternalAllocs = 131;
+const uint32_t flash_sampler_pauseSampling = 132;
+const uint32_t flash_sampler_stopSampling = 133;
+const uint32_t flash_sampler_startSampling = 134;
+const uint32_t flash_sampler_clearSamples = 135;
+const uint32_t flash_sampler_NewObjectSample_object_get = 142;
+const uint32_t flash_sampler_NewObjectSample_size_get = 143;
+const uint32_t flash_trace_Trace_setLevel = 149;
+const uint32_t flash_trace_Trace_getLevel = 150;
+const uint32_t flash_trace_Trace_setListener = 151;
+const uint32_t flash_trace_Trace_getListener = 152;
+const uint32_t flash_utils_Dictionary_private_init = 156;
 extern double shell_toplevel_d2d_o_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define flash_sampler_NewObjectSample_size_get_thunk  shell_toplevel_d2d_o_thunk
 #define avmplus_System_freeMemory_get_thunk  shell_toplevel_d2d_o_thunk
@@ -182,10 +182,11 @@ extern AvmBox shell_toplevel_u2a_ou_thunk(AvmMethodEnv env, uint32_t argc, AvmBo
 extern AvmBox shell_toplevel_a2a_ou_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_StringBuilder_length_set_thunk  shell_toplevel_a2a_ou_thunk
 
-extern AvmBox shell_toplevel_a2a_oo_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
-#define avmplus_Domain_loadBytes_thunk  shell_toplevel_a2a_oo_thunk
-#define avmplus_Domain_domainMemory_set_thunk  shell_toplevel_a2a_oo_thunk
-#define flash_trace_Trace_setListener_thunk  shell_toplevel_a2a_oo_thunk
+extern AvmBox shell_toplevel_v2a_oi_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
+#define flash_utils_ByteArray_writeByte_thunk  shell_toplevel_v2a_oi_thunk
+#define avmplus_System_exit_thunk  shell_toplevel_v2a_oi_thunk
+#define flash_utils_ByteArray_writeInt_thunk  shell_toplevel_v2a_oi_thunk
+#define flash_utils_ByteArray_writeShort_thunk  shell_toplevel_v2a_oi_thunk
 
 extern AvmBox shell_toplevel_s2a_o_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_System_readLine_thunk  shell_toplevel_s2a_o_thunk
@@ -271,8 +272,8 @@ extern AvmBox shell_toplevel_i2a_osu_optu4294967295U_thunk(AvmMethodEnv env, uin
 #define avmplus_StringBuilder_lastIndexOf_thunk  shell_toplevel_i2a_osu_optu4294967295U_thunk
 
 extern AvmBox shell_toplevel_v2a_od_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
-#define flash_utils_ByteArray_writeDouble_thunk  shell_toplevel_v2a_od_thunk
 #define flash_utils_ByteArray_writeFloat_thunk  shell_toplevel_v2a_od_thunk
+#define flash_utils_ByteArray_writeDouble_thunk  shell_toplevel_v2a_od_thunk
 
 extern AvmBox shell_toplevel_s2a_ouu_optu4294967295U_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_StringBuilder_substring_thunk  shell_toplevel_s2a_ouu_optu4294967295U_thunk
@@ -301,11 +302,11 @@ extern AvmBox shell_toplevel_v2a_o_thunk(AvmMethodEnv env, uint32_t argc, AvmBox
 #define flash_utils_ByteArray_private_zlib_compress_thunk  shell_toplevel_v2a_o_thunk
 #define flash_sampler_pauseSampling_thunk  shell_toplevel_v2a_o_thunk
 #define flash_sampler_clearSamples_thunk  shell_toplevel_v2a_o_thunk
-#define flash_utils_ByteArray_private_zlib_uncompress_thunk  shell_toplevel_v2a_o_thunk
+#define flash_sampler_stopSampling_thunk  shell_toplevel_v2a_o_thunk
 #define avmplus_System_ns_example_nstest_thunk  shell_toplevel_v2a_o_thunk
 #define avmplus_System_debugger_thunk  shell_toplevel_v2a_o_thunk
 #define avmplus_StringBuilder_trimToSize_thunk  shell_toplevel_v2a_o_thunk
-#define flash_sampler_stopSampling_thunk  shell_toplevel_v2a_o_thunk
+#define flash_utils_ByteArray_private_zlib_uncompress_thunk  shell_toplevel_v2a_o_thunk
 #define avmplus_StringBuilder_reverse_thunk  shell_toplevel_v2a_o_thunk
 
 extern AvmBox shell_toplevel_a2a_oii_opti2_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
@@ -315,8 +316,8 @@ extern AvmBox shell_toplevel_v2a_ou_thunk(AvmMethodEnv env, uint32_t argc, AvmBo
 #define avmplus_StringBuilder_ensureCapacity_thunk  shell_toplevel_v2a_ou_thunk
 #define flash_utils_ByteArray_position_set_thunk  shell_toplevel_v2a_ou_thunk
 #define avmplus_StringBuilder_removeCharAt_thunk  shell_toplevel_v2a_ou_thunk
-#define flash_utils_ByteArray_length_set_thunk  shell_toplevel_v2a_ou_thunk
 #define flash_utils_ByteArray_writeUnsignedInt_thunk  shell_toplevel_v2a_ou_thunk
+#define flash_utils_ByteArray_length_set_thunk  shell_toplevel_v2a_ou_thunk
 
 extern AvmBox shell_toplevel_v2a_os_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define flash_utils_ByteArray_writeUTF_thunk  shell_toplevel_v2a_os_thunk
@@ -325,12 +326,11 @@ extern AvmBox shell_toplevel_v2a_os_thunk(AvmMethodEnv env, uint32_t argc, AvmBo
 #define avmplus_System_write_thunk  shell_toplevel_v2a_os_thunk
 #define flash_utils_ByteArray_writeUTFBytes_thunk  shell_toplevel_v2a_os_thunk
 
-extern AvmBox shell_toplevel_v2a_oi_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
-#define flash_utils_ByteArray_writeByte_thunk  shell_toplevel_v2a_oi_thunk
-#define avmplus_System_exit_thunk  shell_toplevel_v2a_oi_thunk
-#define flash_utils_ByteArray_writeInt_thunk  shell_toplevel_v2a_oi_thunk
-#define flash_utils_ByteArray_writeShort_thunk  shell_toplevel_v2a_oi_thunk
-
 extern AvmBox shell_toplevel_a2a_oab_optbfalse_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define flash_sampler_getMemberNames_thunk  shell_toplevel_a2a_oab_optbfalse_thunk
+
+extern AvmBox shell_toplevel_a2a_oo_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
+#define avmplus_Domain_loadBytes_thunk  shell_toplevel_a2a_oo_thunk
+#define avmplus_Domain_domainMemory_set_thunk  shell_toplevel_a2a_oo_thunk
+#define flash_trace_Trace_setListener_thunk  shell_toplevel_a2a_oo_thunk
 

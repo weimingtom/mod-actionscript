@@ -63,7 +63,7 @@ print("Building shell_toplevel...")
 # compile builtins
 #vic - no Java
 #os.system(asc+" -abcfuture -import ../core/builtin.abc -builtin -out shell_toplevel shell_toplevel.as Domain.as StringBuilder.as ByteArray.as ../extensions/Sampler.as ../extensions/Trace.as ../extensions/Dictionary.as Endian.as Java.as")
-os.system(asc+" -abcfuture -import ../core/builtin.abc -builtin -out shell_toplevel \
+os.system(asc+" -abcfuture -import ../core/builtin.abc -builtin -out ../fcgishell/shell_toplevel \
   shell_toplevel.as \
   ../shell/Domain.as \
   ../shell/StringBuilder.as \

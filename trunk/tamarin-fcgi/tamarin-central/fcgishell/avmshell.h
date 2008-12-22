@@ -69,7 +69,7 @@ namespace avmplus
 
 #include "../shell/FileInputStream.h"
 #include "../shell/ConsoleOutputStream.h"
-#include "../shell/SystemClass.h"
+#include "SystemClass.h"
 #include "../shell/StringBuilderClass.h"
 #include "../shell/FileClass.h"
 //vic

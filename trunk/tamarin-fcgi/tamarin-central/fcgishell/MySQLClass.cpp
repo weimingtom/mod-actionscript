@@ -120,5 +120,23 @@ namespace avmshell
 
 		return out;
 	}
+
+	/*void MySQLClass::print(Stringp s)
+	{
+		for (int i=0; i<s->length(); i++)
+		{
+			wchar value = (*s)[i];
+			// Encode the character as UTF-8
+			if (value < 0x80) {
+				cout << (char)value;
+			} else {
+				uint8 Octets[6];
+				int OctetsLen = UnicodeUtils::Ucs4ToUtf8((uint32)value, Octets);
+				//write(Octets, OctetsLen);
+				for(int j=0; j<OctetsLen; j++)
+					cout << Octets[j];
+			}
+		}
+	}*/
 }
 
