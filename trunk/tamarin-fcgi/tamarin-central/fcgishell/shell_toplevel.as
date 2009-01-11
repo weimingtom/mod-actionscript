@@ -161,9 +161,40 @@ package db {
 	[native(cls="MySQLClass", methods="auto")]
 	public class MySQL
 	{
+		/**
+		 * Performs a real connect to the mysql database
+		 * No connection pool is implemented at the moment, each script invocation creates a new connection :(
+		 * The connection handler is private and global (implicit). Concurent database connections are not possible.
+		 * The charset is always UTF-8
+		 * @return true only if connection was successfull;
+		 */
 		public native static function connect(host:String, db:String, user:String, pass:String):Boolean;
-		public native static function fetch(sql:String):Array
-		//public native static function print(text:String):void
+
+		/**
+		 * Fetch a query result as a two dimensional Array. The first row of the array contains the column names.
+		 * The following rows contains the data returned by the query.
+		 * Values are only indexed numerically. To match column names to fields, use the first row.
+		 * If an error ocurred, it returns null. Use getError() to see what went wrong.
+		 */
+		public native static function fetch(sql:String):Array;
+
+		/**
+		 * Execute query (insert/update/delete).
+		 * @return affected rows or -1 if there was an error. Use getError() to see what went wrong.
+		 */
+		public native static function exec(sql:String):int;
+
+		/**
+		 * Escape special chars for safely concatenate query values. Does not add quotes.
+		 * Internaly, it uses mysql_real_escape_string
+		 */
+		public native static function escape(str:String):String;
+
+
+		/**
+		 * Get last mysql error.
+		 */
+		public native static function getError():String;
 	}
 }
 

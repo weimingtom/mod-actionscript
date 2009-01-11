@@ -15,8 +15,6 @@
 #include <stdlib.h>
 #include <mysql/mysql.h>
 #include <string>
-#include <libmysqlwrapped.h>
-
 
 
 using namespace std;
@@ -26,18 +24,42 @@ namespace avmshell
 	MySQLClass::MySQLClass(VTable *cvtable)	: ClassClosure(cvtable)
     {
 		createVanillaPrototype();
+
+		mysql = mysql_init(mysql);
+		if (!mysql)
+			cerr << "Error initialising MYSQL" << endl;
 	}
 
-
-	string MySQLClass::_s(Stringp s)
+	MySQLClass::~MySQLClass()
 	{
-		return string(s->toUTF8String()->c_str());
+		if (mysql)
+			mysql_close(mysql);
+	}
+
+	//convert from UTF16 to UTF8
+	const char* MySQLClass::strConv(Stringp s)
+	{
+		return s->toUTF8String()->c_str();
 	}
 
 	bool MySQLClass::connect(Stringp host, Stringp dbName, Stringp user, Stringp pass)
 	{
-		db = new Database(_s(host), _s(user), _s(pass), _s(dbName));
-		//mysql_set_character_set()
+		if (!mysql_real_connect(mysql,
+				strConv(host),
+				strConv(user),
+				strConv(pass),
+				strConv(dbName),
+				0, NULL, CLIENT_FOUND_ROWS))
+		{
+			return false;
+		}
+
+		if (mysql_set_character_set(mysql, "utf8"))
+		{
+			cerr << "Error connecting to MySQL: can't set UTF-8 character set." << endl;
+			return false;
+		}
+
 		return true;
 	}
 
@@ -45,98 +67,102 @@ namespace avmshell
 
 	ArrayObject* MySQLClass::fetch(Stringp sql)
 	{
+		if (!sql)
+			toplevel()->throwArgumentError(kNullArgumentError, "sql");
+
+		if (!mysql) return NULL;
+
+		if (mysql_query(mysql, strConv(sql)))
+			return NULL;
+
+
+		//get field names
+		MYSQL_RES *res = mysql_store_result(mysql);
+		if (!res)
+			return NULL;
+
+
 		AvmCore* core = this->core();
 
-		//cout << _s(sql) << "<hr>";
-
-		//Database db("localhost","root","telita","tamarin");
-		Query q(*db);
-
-
-		//MYSQL_RES *res = q.get_result("select * from tbl1");
-		MYSQL_RES *res = q.get_result(_s(sql));
-
 		//output array
-		ArrayObject *out = this->toplevel()->arrayClass->newArray(q.num_rows());
+		ArrayObject *out = this->toplevel()->arrayClass->newArray(mysql_num_rows(res)+1);
 
 		uint numFields = mysql_num_fields(res);
 		MYSQL_FIELD* fields = mysql_fetch_fields(res);
 
-		//get field names
-		if (res)
+		ArrayObject *oRow = this->toplevel()->arrayClass->newArray();
+		out->setIntProperty(0, oRow->atom());
+
+		//output field names in the top row
+		for (uint i=0; i<numFields; i++)
 		{
-			ArrayObject *oRow = this->toplevel()->arrayClass->newArray();
-			out->setIntProperty(0, oRow->atom());
-
-			for (uint i=0; i<numFields; i++)
-			{
-				Stringp s = fields[i].name ? core->newString(fields[i].name) : (Stringp) core->kEmptyString;
-				oRow->setIntProperty(i, s->atom());
-			}
-
-
-			/*MYSQL_FIELD *f;
-			mysql_field_seek(res, 0);
-			uint fld = 0;
-			while ((f = mysql_fetch_field(res)))
-			{
-				Stringp s = f->name ? core->newString(f->name) : core->newString("");
-				oRow->setIntProperty(fld++, s->atom());
-			}*/
+			Stringp s = fields[i].name ? core->newString(fields[i].name) : (Stringp) core->kEmptyString;
+			oRow->setIntProperty(i, s->atom());
 		}
 
-		int k = 1;
-		while (q.fetch_row())
-		{
-			//long id = q.getval();
 
+		int k = 1;
+		MYSQL_ROW row;
+
+		while ((row = mysql_fetch_row(res)))
+		{
 			//ScriptObject* oRow = this->toplevel()->objectClass->construct();
 			ArrayObject *oRow = this->toplevel()->arrayClass->newArray();
 
 			for (uint i=0; i<numFields; i++)
 			{
-				/*if (IS_NUM(fields[i].type))
-				{
-					oRow->setIntProperty(i, core->doubleToAtom(atof(q.getstr())));
-				}
-				else*/
-				{
-					//for unknown reason, can't assign a value in a string key
-					//oRow->setStringProperty(n, v->atom());
-					oRow->setIntProperty(i, core->newString(q.getstr())->atom());
-				}
+				//if (IS_NUM(fields[i].type))
+				//At the moment, the value is always of type String
+				oRow->setIntProperty(i, row[i] ? core->newString(row[i])->atom() : NULL);
 			}
-
 			out->setIntProperty(k++, oRow->atom());
 		}
-		q.free_result();
 
-
-
-		//Example array
-		//ArrayObject *out = this->toplevel()->arrayClass->newArray(30);
-		//for (int i=0; i<30; i++)
-		//	out->setIntProperty(i, core->newString("aaa")->atom());
-
+		mysql_free_result(res);
 		return out;
 	}
 
-	/*void MySQLClass::print(Stringp s)
+	int MySQLClass::exec(Stringp sql)
 	{
-		for (int i=0; i<s->length(); i++)
-		{
-			wchar value = (*s)[i];
-			// Encode the character as UTF-8
-			if (value < 0x80) {
-				cout << (char)value;
-			} else {
-				uint8 Octets[6];
-				int OctetsLen = UnicodeUtils::Ucs4ToUtf8((uint32)value, Octets);
-				//write(Octets, OctetsLen);
-				for(int j=0; j<OctetsLen; j++)
-					cout << Octets[j];
-			}
-		}
-	}*/
+		if (!sql)
+			toplevel()->throwArgumentError(kNullArgumentError, "sql");
+
+		if (!mysql)
+			return -1;
+
+		const char *q = strConv(sql);
+
+		if (mysql_real_query(mysql, q, strlen(q)))
+			return -1;
+
+		return (uint) mysql_affected_rows(mysql);
+	}
+
+	Stringp MySQLClass::escape(Stringp str)
+	{
+		if (!str)
+			toplevel()->throwArgumentError(kNullArgumentError, "str");
+		if (!mysql)
+			return NULL;
+
+		const char *src = strConv(str);
+		int len0 = strlen(src);
+		char *res = new char[len0 * 2 + 1];
+
+		int len1 = mysql_real_escape_string(mysql, res, src, len0);
+		res[len1] = '\0';
+		Stringp sret = this->core()->newString(res);
+		delete res;
+		return sret;
+	}
+
+	Stringp MySQLClass::getError()
+	{
+
+		if (mysql)
+			return this->core()->newString(mysql_error(mysql));
+
+		return NULL;
+	}
 }
 

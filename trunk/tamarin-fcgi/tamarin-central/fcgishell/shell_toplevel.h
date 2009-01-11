@@ -80,84 +80,87 @@ const uint32_t avmplus_File_read = 33;
 const uint32_t avmplus_File_write = 34;
 const uint32_t db_MySQL_connect = 43;
 const uint32_t db_MySQL_fetch = 44;
-const uint32_t avmplus_Domain_currentDomain_get = 48;
-const uint32_t avmplus_Domain_MIN_DOMAIN_MEMORY_LENGTH_get = 49;
-const uint32_t avmplus_Domain_private_init = 50;
-const uint32_t avmplus_Domain_loadBytes = 52;
-const uint32_t avmplus_Domain_getClass = 53;
-const uint32_t avmplus_Domain_domainMemory_get = 55;
-const uint32_t avmplus_Domain_domainMemory_set = 56;
-const uint32_t avmplus_StringBuilder_append = 60;
-const uint32_t avmplus_StringBuilder_capacity_get = 61;
-const uint32_t avmplus_StringBuilder_charAt = 62;
-const uint32_t avmplus_StringBuilder_charCodeAt = 63;
-const uint32_t avmplus_StringBuilder_ensureCapacity = 64;
-const uint32_t avmplus_StringBuilder_indexOf = 65;
-const uint32_t avmplus_StringBuilder_insert = 66;
-const uint32_t avmplus_StringBuilder_lastIndexOf = 67;
-const uint32_t avmplus_StringBuilder_length_get = 68;
-const uint32_t avmplus_StringBuilder_length_set = 69;
-const uint32_t avmplus_StringBuilder_remove = 70;
-const uint32_t avmplus_StringBuilder_removeCharAt = 71;
-const uint32_t avmplus_StringBuilder_replace = 72;
-const uint32_t avmplus_StringBuilder_reverse = 73;
-const uint32_t avmplus_StringBuilder_setCharAt = 74;
-const uint32_t avmplus_StringBuilder_substring = 75;
-const uint32_t avmplus_StringBuilder_toString = 76;
-const uint32_t avmplus_StringBuilder_trimToSize = 77;
-const uint32_t flash_utils_ByteArray_readFile = 80;
-const uint32_t flash_utils_ByteArray_writeFile = 81;
-const uint32_t flash_utils_ByteArray_readBytes = 82;
-const uint32_t flash_utils_ByteArray_writeBytes = 83;
-const uint32_t flash_utils_ByteArray_writeBoolean = 84;
-const uint32_t flash_utils_ByteArray_writeByte = 85;
-const uint32_t flash_utils_ByteArray_writeShort = 86;
-const uint32_t flash_utils_ByteArray_writeInt = 87;
-const uint32_t flash_utils_ByteArray_writeUnsignedInt = 88;
-const uint32_t flash_utils_ByteArray_writeFloat = 89;
-const uint32_t flash_utils_ByteArray_writeDouble = 90;
-const uint32_t flash_utils_ByteArray_writeUTF = 91;
-const uint32_t flash_utils_ByteArray_writeUTFBytes = 92;
-const uint32_t flash_utils_ByteArray_readBoolean = 93;
-const uint32_t flash_utils_ByteArray_readByte = 94;
-const uint32_t flash_utils_ByteArray_readUnsignedByte = 95;
-const uint32_t flash_utils_ByteArray_readShort = 96;
-const uint32_t flash_utils_ByteArray_readUnsignedShort = 97;
-const uint32_t flash_utils_ByteArray_readInt = 98;
-const uint32_t flash_utils_ByteArray_readUnsignedInt = 99;
-const uint32_t flash_utils_ByteArray_readFloat = 100;
-const uint32_t flash_utils_ByteArray_readDouble = 101;
-const uint32_t flash_utils_ByteArray_readUTF = 102;
-const uint32_t flash_utils_ByteArray_readUTFBytes = 103;
-const uint32_t flash_utils_ByteArray_length_get = 104;
-const uint32_t flash_utils_ByteArray_length_set = 105;
-const uint32_t flash_utils_ByteArray_private_zlib_compress = 106;
-const uint32_t flash_utils_ByteArray_private_zlib_uncompress = 108;
-const uint32_t flash_utils_ByteArray_private__toString = 110;
-const uint32_t flash_utils_ByteArray_bytesAvailable_get = 112;
-const uint32_t flash_utils_ByteArray_position_get = 113;
-const uint32_t flash_utils_ByteArray_position_set = 114;
-const uint32_t flash_utils_ByteArray_endian_get = 115;
-const uint32_t flash_utils_ByteArray_endian_set = 116;
-const uint32_t flash_sampler_isGetterSetter = 119;
-const uint32_t flash_sampler__getInvocationCount = 120;
-const uint32_t flash_sampler_getSampleCount = 124;
-const uint32_t flash_sampler_getSamples = 125;
-const uint32_t flash_sampler_getMemberNames = 126;
-const uint32_t flash_sampler_getSize = 127;
-const uint32_t flash_sampler__setSamplerCallback = 128;
-const uint32_t flash_sampler_sampleInternalAllocs = 131;
-const uint32_t flash_sampler_pauseSampling = 132;
-const uint32_t flash_sampler_stopSampling = 133;
-const uint32_t flash_sampler_startSampling = 134;
-const uint32_t flash_sampler_clearSamples = 135;
-const uint32_t flash_sampler_NewObjectSample_object_get = 142;
-const uint32_t flash_sampler_NewObjectSample_size_get = 143;
-const uint32_t flash_trace_Trace_setLevel = 149;
-const uint32_t flash_trace_Trace_getLevel = 150;
-const uint32_t flash_trace_Trace_setListener = 151;
-const uint32_t flash_trace_Trace_getListener = 152;
-const uint32_t flash_utils_Dictionary_private_init = 156;
+const uint32_t db_MySQL_exec = 45;
+const uint32_t db_MySQL_escape = 46;
+const uint32_t db_MySQL_getError = 47;
+const uint32_t avmplus_Domain_currentDomain_get = 51;
+const uint32_t avmplus_Domain_MIN_DOMAIN_MEMORY_LENGTH_get = 52;
+const uint32_t avmplus_Domain_private_init = 53;
+const uint32_t avmplus_Domain_loadBytes = 55;
+const uint32_t avmplus_Domain_getClass = 56;
+const uint32_t avmplus_Domain_domainMemory_get = 58;
+const uint32_t avmplus_Domain_domainMemory_set = 59;
+const uint32_t avmplus_StringBuilder_append = 63;
+const uint32_t avmplus_StringBuilder_capacity_get = 64;
+const uint32_t avmplus_StringBuilder_charAt = 65;
+const uint32_t avmplus_StringBuilder_charCodeAt = 66;
+const uint32_t avmplus_StringBuilder_ensureCapacity = 67;
+const uint32_t avmplus_StringBuilder_indexOf = 68;
+const uint32_t avmplus_StringBuilder_insert = 69;
+const uint32_t avmplus_StringBuilder_lastIndexOf = 70;
+const uint32_t avmplus_StringBuilder_length_get = 71;
+const uint32_t avmplus_StringBuilder_length_set = 72;
+const uint32_t avmplus_StringBuilder_remove = 73;
+const uint32_t avmplus_StringBuilder_removeCharAt = 74;
+const uint32_t avmplus_StringBuilder_replace = 75;
+const uint32_t avmplus_StringBuilder_reverse = 76;
+const uint32_t avmplus_StringBuilder_setCharAt = 77;
+const uint32_t avmplus_StringBuilder_substring = 78;
+const uint32_t avmplus_StringBuilder_toString = 79;
+const uint32_t avmplus_StringBuilder_trimToSize = 80;
+const uint32_t flash_utils_ByteArray_readFile = 83;
+const uint32_t flash_utils_ByteArray_writeFile = 84;
+const uint32_t flash_utils_ByteArray_readBytes = 85;
+const uint32_t flash_utils_ByteArray_writeBytes = 86;
+const uint32_t flash_utils_ByteArray_writeBoolean = 87;
+const uint32_t flash_utils_ByteArray_writeByte = 88;
+const uint32_t flash_utils_ByteArray_writeShort = 89;
+const uint32_t flash_utils_ByteArray_writeInt = 90;
+const uint32_t flash_utils_ByteArray_writeUnsignedInt = 91;
+const uint32_t flash_utils_ByteArray_writeFloat = 92;
+const uint32_t flash_utils_ByteArray_writeDouble = 93;
+const uint32_t flash_utils_ByteArray_writeUTF = 94;
+const uint32_t flash_utils_ByteArray_writeUTFBytes = 95;
+const uint32_t flash_utils_ByteArray_readBoolean = 96;
+const uint32_t flash_utils_ByteArray_readByte = 97;
+const uint32_t flash_utils_ByteArray_readUnsignedByte = 98;
+const uint32_t flash_utils_ByteArray_readShort = 99;
+const uint32_t flash_utils_ByteArray_readUnsignedShort = 100;
+const uint32_t flash_utils_ByteArray_readInt = 101;
+const uint32_t flash_utils_ByteArray_readUnsignedInt = 102;
+const uint32_t flash_utils_ByteArray_readFloat = 103;
+const uint32_t flash_utils_ByteArray_readDouble = 104;
+const uint32_t flash_utils_ByteArray_readUTF = 105;
+const uint32_t flash_utils_ByteArray_readUTFBytes = 106;
+const uint32_t flash_utils_ByteArray_length_get = 107;
+const uint32_t flash_utils_ByteArray_length_set = 108;
+const uint32_t flash_utils_ByteArray_private_zlib_compress = 109;
+const uint32_t flash_utils_ByteArray_private_zlib_uncompress = 111;
+const uint32_t flash_utils_ByteArray_private__toString = 113;
+const uint32_t flash_utils_ByteArray_bytesAvailable_get = 115;
+const uint32_t flash_utils_ByteArray_position_get = 116;
+const uint32_t flash_utils_ByteArray_position_set = 117;
+const uint32_t flash_utils_ByteArray_endian_get = 118;
+const uint32_t flash_utils_ByteArray_endian_set = 119;
+const uint32_t flash_sampler_isGetterSetter = 122;
+const uint32_t flash_sampler__getInvocationCount = 123;
+const uint32_t flash_sampler_getSampleCount = 127;
+const uint32_t flash_sampler_getSamples = 128;
+const uint32_t flash_sampler_getMemberNames = 129;
+const uint32_t flash_sampler_getSize = 130;
+const uint32_t flash_sampler__setSamplerCallback = 131;
+const uint32_t flash_sampler_sampleInternalAllocs = 134;
+const uint32_t flash_sampler_pauseSampling = 135;
+const uint32_t flash_sampler_stopSampling = 136;
+const uint32_t flash_sampler_startSampling = 137;
+const uint32_t flash_sampler_clearSamples = 138;
+const uint32_t flash_sampler_NewObjectSample_object_get = 145;
+const uint32_t flash_sampler_NewObjectSample_size_get = 146;
+const uint32_t flash_trace_Trace_setLevel = 152;
+const uint32_t flash_trace_Trace_getLevel = 153;
+const uint32_t flash_trace_Trace_setListener = 154;
+const uint32_t flash_trace_Trace_getListener = 155;
+const uint32_t flash_utils_Dictionary_private_init = 159;
 extern double shell_toplevel_d2d_o_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define flash_sampler_NewObjectSample_size_get_thunk  shell_toplevel_d2d_o_thunk
 #define avmplus_System_freeMemory_get_thunk  shell_toplevel_d2d_o_thunk
@@ -195,6 +198,7 @@ extern AvmBox shell_toplevel_s2a_o_thunk(AvmMethodEnv env, uint32_t argc, AvmBox
 #define flash_utils_ByteArray_private__toString_thunk  shell_toplevel_s2a_o_thunk
 #define avmplus_System_getAvmplusVersion_thunk  shell_toplevel_s2a_o_thunk
 #define avmplus_StringBuilder_toString_thunk  shell_toplevel_s2a_o_thunk
+#define db_MySQL_getError_thunk  shell_toplevel_s2a_o_thunk
 
 extern AvmBox shell_toplevel_v2a_oss_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_File_write_thunk  shell_toplevel_v2a_oss_thunk
@@ -236,11 +240,13 @@ extern AvmBox shell_toplevel_v2a_ouus_thunk(AvmMethodEnv env, uint32_t argc, Avm
 
 extern AvmBox shell_toplevel_i2a_os_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_System_exec_thunk  shell_toplevel_i2a_os_thunk
+#define db_MySQL_exec_thunk  shell_toplevel_i2a_os_thunk
 
 extern AvmBox shell_toplevel_b2a_oa_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
 #define avmplus_System_isGlobal_thunk  shell_toplevel_b2a_oa_thunk
 
 extern AvmBox shell_toplevel_s2a_os_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
+#define db_MySQL_escape_thunk  shell_toplevel_s2a_os_thunk
 #define avmplus_File_read_thunk  shell_toplevel_s2a_os_thunk
 
 extern AvmBox shell_toplevel_s2a_ou_thunk(AvmMethodEnv env, uint32_t argc, AvmBox* argv);
