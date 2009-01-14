@@ -1,9 +1,5 @@
 #summary ActionScript is the language originally used to program Flash applications
 
-= Introduction =
-
-Current version: 3
-
 Previously developed by Macromedia, now by Adobe
 
 [http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/ Language Reference]
