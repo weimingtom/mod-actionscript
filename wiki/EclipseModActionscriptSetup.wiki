@@ -10,7 +10,7 @@ Then:
  * apt-get install libapache2-mod-fcgid
  * apt-get install libfcgi-dev
  * apt-get install libmysqlclient15-dev
- * Get mysqlwrapped: this one will be removed in future. Compile and install in a system accessible location (unlike the defaults). I'll be back with either an alternate solution or details on how to use this library
+
 
 
 copy fcgishell directory inside tamarin-central, under your project
