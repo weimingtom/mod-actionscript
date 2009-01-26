@@ -1,0 +1,23 @@
+Changes to the original tamarin_central:
+
+manifest.mk
+avmshell.h
+avmshell.cpp
+shell_toplevel.as
+added main.cpp
+added MySQLClass h,cpp
+added HttpClass h,cpp
+
+
+How I compiled the thing on my Ubuntu machine
+
+cd obj-debug
+chmod +x ../tamarin-central/configure.py
+chmod +x ../tamarin-central/build/*.py
+chmod +x ../tamarin-central/shell/*.py
+../tamarin-central/configure.py --enable-shell --enable-debugger
+make
+
+
+update natives if needed
+cd ../tamarin-central/shell/shell_toplevel.py
