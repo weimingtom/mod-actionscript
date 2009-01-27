@@ -26,7 +26,7 @@ svn checkout http://mod-actionscript.googlecode.com/svn/trunk/tamarin-embed
 cd tamarin-embed
 mkdir obj-debug
 cd obj-debug
-#configure
+#configure (make sure all .py files have execution permission)
 ../tamarin-central/configure.py --enable-shell --enable-debugger
 #compile
 make
