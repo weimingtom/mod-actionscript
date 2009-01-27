@@ -38,8 +38,8 @@ make
 -----------------------------------
     Apache setup
 -----------------------------------
-Place tamarinfcgi somewhere (eg /home/youruser/bin/)
-add this rule in your apache virtual host
+Place tamarinfcgi somewhere (eg /home/youruser/bin/).
+Add this rule in your apache virtual host
 
 	<Location /actionscript>
 	    AddHandler fcgid-script .abc
@@ -47,7 +47,5 @@ add this rule in your apache virtual host
 	    Options +ExecCGI
 	</Location>
 
-replace location (/actionscript) with the web directory where you put helo.abc
-
-Point your browser to helo.abc file to see it in action
-
+Replace location (/actionscript) with the web directory where you want to host the .abc files.
+Copy the example helo.abc in that directory and point your browser to helo.abc file to see it in action.
