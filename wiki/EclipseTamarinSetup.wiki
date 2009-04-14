@@ -1,4 +1,5 @@
 #summary How to edit and compile Tamarin using Eclipse CDT
+#labels Deprecated
 
 = Eclipse CDT setup for Tamarin =
 
