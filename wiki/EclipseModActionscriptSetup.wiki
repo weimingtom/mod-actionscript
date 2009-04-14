@@ -1,4 +1,5 @@
 #summary mod_actionscript (fcgi for now) setup for Eclipse CDT
+#labels Deprecated
 
 = Setup mod_actionscript in Eclipse CDT =
 
