@@ -205,42 +205,64 @@ package http
 	import avmplus.System;
 	public function out(s:String):void
 	{
-		_Http.write(s);
+		_HTTP.write(s);
 	}
 	
 	public function logTrace(s:String):void
 	{
-		_Http.logError(s);
+		_HTTP.logError(s);
 	}
 
 	public function simpleHeader():void
 	{
-		_Http.write('Content-type: text/html; charset=utf-8\r\n\r\n');
+		_HTTP.write('Content-type: text/html; charset=utf-8\r\n\r\n');
 	}
 	
 	public function rawPostData():String
 	{
-		return _Http.postData();
+		return _HTTP.postData();
 	}
 	
 	public function listEnv():Array
 	{
-		return _Http.listEnv();
+		return _HTTP.listEnv();
 	}
 	
 	public function getEnv(key:String):String
 	{
-		return _Http.getEnv(key);
+		return _HTTP.getEnv(key);
 	}
 	
-	[native(cls="HttpClass", methods="auto")]
-	class _Http
+	[native(cls="HTTPClass", methods="auto")]
+	class _HTTP
 	{
-		public native static function write(content:String):void;		
+		public native static function write(content:String):void;
 		public native static function logError(msg:String):void;
 		
 		public native static function postData():String;
 		public native static function listEnv():Array;
 		public native static function getEnv(key:String):String;
 	}
+
+	[native(cls="HTTPFormClass", methods="auto")]
+	public class _HTTPForm
+	{
+		public native static function getFields():Array;
+		public native static function listFileKeys():Array;
+		public native static function isUploaded(key:String):Boolean;
+		public native static function saveFile(key:String, destPath:String):Boolean;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

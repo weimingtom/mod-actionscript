@@ -82,7 +82,8 @@ namespace avmplus
 #include "JavaGlue.h"
 
 #include "MySQLClass.h"
-#include "HttpClass.h"
+#include "HTTPClass.h"
+#include "HTTPFormClass.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:4996)

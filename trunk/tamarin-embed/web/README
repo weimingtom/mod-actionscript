@@ -5,7 +5,9 @@ This is only tested on Linux Ubuntu 8.10 and Debian 4.x
 1. You need to install some packages:
 
 apt-get install libapache2-mod-fcgid
-apt-get install libmysqlclient15-dev
+apt-get install libmysqlclient15off
+apt-get install libcgicc1
+apt-get install libfcgi (?)
 
 (restart apache)
 

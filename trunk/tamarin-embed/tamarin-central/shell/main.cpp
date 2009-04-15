@@ -27,15 +27,31 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include <iostream>
 #include <stdlib.h>
 
+
+//#include <stdexcept>
+//#include <cstdlib>
+
+
 //fcgi headers
 #include <fcgio.h>
 #include <fcgi_config.h>
 
 #include <string>
 
-#include "HttpClass.h"
+
+//CGICC
+#include "cgicc/CgiDefs.h"
+#include "cgicc/Cgicc.h"
+//#include "cgicc/HTMLClasses.h"
+
+#include <iostream>
+#include <fstream>
+
+
 
 using namespace std;
+
+using namespace cgicc;
 
 
 //------------------------------------------------------------
@@ -64,6 +80,7 @@ void operator delete[]( void *p )
 		fm->Free(p);
 }*/
 //-------------------------------------------------------------
+
 
 
 FCGX_Request httpRequest;
@@ -106,6 +123,7 @@ int main (void)
         cin.rdbuf(&cin_fcgi_streambuf);
         cout.rdbuf(&cout_fcgi_streambuf);
         cerr.rdbuf(&cerr_fcgi_streambuf);
+
 
         // Although FastCGI supports writing before reading,
         // many http clients (browsers) don't support it (so

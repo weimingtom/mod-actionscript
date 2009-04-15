@@ -40,7 +40,7 @@ PROGRAMS += shell
 shell_BASENAME = avmshell
 shell_INCLUDES = -I$(srcdir) -I$(topsrcdir)/extensions
 shell_DEFINES = -DAVMPLUS_SHELL
-shell_STATIC_LIBRARIES = MMgc avmplus fcgi fcgi++ mysqlclient
+shell_STATIC_LIBRARIES = MMgc avmplus fcgi fcgi++ mysqlclient cgicc
 shell_DIR := $(curdir)/
 shell_EXTRA_CPPFLAGS := $(AVMSHELL_CPPFLAGS)
 shell_EXTRA_LDFLAGS := $(AVMSHELL_LDFLAGS)
@@ -53,7 +53,8 @@ shell_CXXSRCS := $(shell_CXXSRCS) \
   $(curdir)/main.cpp \
   $(curdir)/avmshell.cpp \
   $(curdir)/MySQLClass.cpp \
-  $(curdir)/HttpClass.cpp \
+  $(curdir)/HTTPClass.cpp \
+  $(curdir)/HTTPFormClass.cpp \
   $(curdir)/ByteArrayGlue.cpp \
   $(curdir)/ConsoleOutputStream.cpp \
   $(curdir)/DataIO.cpp \

@@ -36,22 +36,22 @@ extern FCGX_Request httpRequest;
 namespace avmshell
 {
 
-	HttpClass::HttpClass(VTable *cvtable) : ClassClosure(cvtable)
+	HTTPClass::HTTPClass(VTable *cvtable) : ClassClosure(cvtable)
     {
 		createVanillaPrototype();
     }
 
-	void HttpClass::write(Stringp content)
+	void HTTPClass::write(Stringp content)
 	{
 		cout << content->toUTF8String()->c_str();
 	}
 
-	void HttpClass::logError(Stringp msg)
+	void HTTPClass::logError(Stringp msg)
 	{
 		cerr << msg->toUTF8String()->c_str();
 	}
 
-	Stringp HttpClass::postData()
+	Stringp HTTPClass::postData()
 	{
 		AvmCore* core = this->core();
 
@@ -65,7 +65,7 @@ namespace avmshell
 	}
 
 	//read stdin
-	long HttpClass::readPost(char ** content)
+	long HTTPClass::readPost(char ** content)
 	{
 	    char * clenstr = FCGX_GetParam("CONTENT_LENGTH", httpRequest.envp);
 	    unsigned long clen = STDIN_MAX;
@@ -107,7 +107,7 @@ namespace avmshell
 	}
 
 
-	ArrayObject* HttpClass::listEnv()
+	ArrayObject* HTTPClass::listEnv()
 	{
 		AvmCore *core = this->core();
 		ArrayObject *out = this->toplevel()->arrayClass->newArray();
@@ -122,7 +122,7 @@ namespace avmshell
 	    return out;
 	}
 
-	Stringp HttpClass::getEnv(Stringp key)
+	Stringp HTTPClass::getEnv(Stringp key)
 	{
 		char *s = FCGX_GetParam(key->toUTF8String()->c_str(), httpRequest.envp);
 		return this->core()->newString(s);

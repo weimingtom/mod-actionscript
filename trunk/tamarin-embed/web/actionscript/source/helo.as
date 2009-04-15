@@ -17,6 +17,28 @@ http.out(http.listEnv().join('<br>'));
 //http.out(http.getEnv('SCRIPT_FILENAME'));
 
 
+
+/*
+//File upload example
+var xml:XML =
+	<form method="post" enctype="multipart/form-data">
+		<input type="text" value="ggg" name="var1"/><br/>
+		<input type="file" name="file1"/>
+		<input type="submit" value="submit"/>
+	</form>;
+
+http.out(xml.toXMLString());
+
+http.out('Multipart fields:' + http._HTTPForm.getFields()+'<br>');
+http.out('Multipart files:' + http._HTTPForm.listFileKeys()+'<br>');
+if (http._HTTPForm.isUploaded('file1'))
+{
+	http._HTTPForm.saveFile('file1', 'saved.jpg');
+	http.out('<img src=\"saved.jpg\" width=300>');
+}
+*/
+
+
 //------------------
 //   Speed test
 //------------------
