@@ -1,0 +1,35 @@
+Manual instalation only, for now
+
+This is only tested on Linux Ubuntu 8.10 and Debian 4.x
+
+1. You need to install some packages:
+
+apt-get install libapache2-mod-fcgid
+apt-get install libmysqlclient15off
+apt-get install libcgicc1
+apt-get install libfcgi (?)
+
+(restart apache)
+
+
+Place tamarinfcgi somewhere (eg /home/youruser/bin/)
+Add this rule in your apache virtual host
+
+	<Location /actionscript>
+	    AddHandler fcgid-script .abc
+	    FCGIWrapper /home/youruser/bin/tamarinfcgi .abc
+	    Options +ExecCGI
+	</Location>
+
+Replace location (/actionscript) with the web directory where you want to host the .abc files.
+Copy the example helo.abc in that directory and point your browser to helo.abc file to see it in action.
+
+
+----------------------------------------------------------
+To make changes in the page, you need to recompile helo.as
+
+cd actionscript/source
+./compile.sh helo.as
+
+this will overwrite helo.abc in the parent directory
+

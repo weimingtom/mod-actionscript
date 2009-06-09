@@ -1,0 +1,56 @@
+<!--form method="POST" action="app.abc">
+<textarea name="var1"></textarea>
+<input type="submit"/>
+</form-->
+<style>
+.bk {width:300;float:left;border:solid black 1px; margin:2px}
+</style>
+
+<input type="text" id="count" value="1000">
+<br>
+<select id="url">
+	<option>helo.abc</option>
+	<option>test.php</option>
+</select>
+<input type="button" value="start" onclick="start()">
+<input type="button" value="stop" onclick="stopFlag = true">
+
+<div id="div11"></div>
+<div id="div12"></div>
+<div id="div2"></div>
+
+<script src="jquery.js"></script>
+<script>
+
+function ld(o)
+{
+	if (stopFlag) return;
+	$.get(o.url, function(data)
+	{
+		//alert(data);
+		document.getElementById(o.target).innerHTML = o.ct + ': ' + o.crt;
+		if (o.crt++ < o.ct) ld(o);
+		else
+			document.getElementById('div2').innerHTML += '<div>'+o.ct+' '+o.url+': <b>'+(new Date().getTime() - o.t0)/o.ct + '</b></div>';
+	});
+}
+
+function start()
+{
+	stopFlag = false;
+	ld({
+		target: 'div11',
+		url: $('#url').val(),
+		ct: $('#count').val(),
+		crt: 0,
+		t0: new Date().getTime()
+	});
+	ld({
+		target: 'div12',
+		url: $('#url').val(),
+		ct: $('#count').val(),
+		crt: 0,
+		t0: new Date().getTime()
+	});
+}
+</script>
