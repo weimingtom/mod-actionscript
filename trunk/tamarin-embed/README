@@ -32,20 +32,21 @@ cd obj-debug
 make
 
 #the executable is obj-debug/shell/avmshell
-#copy the executable somewhere and rename it to tamarinfcgi
+#copy the executable somewhere and rename it to avmshell-fcgi
+chmod a+x avmshell-fcgi
 
 
 -----------------------------------
     Apache setup
 -----------------------------------
-Place tamarinfcgi somewhere (eg /home/youruser/bin/).
+Place tamarinfcgi somewhere (for example /home/youruser/bin/).
 Add this rule in your apache virtual host
 
 	<Location /actionscript>
 	    AddHandler fcgid-script .abc
-	    FCGIWrapper /home/youruser/bin/tamarinfcgi .abc
+	    FCGIWrapper /home/youruser/bin/avmshell-fcgi .abc
 	    Options +ExecCGI
 	</Location>
 
-Replace location (/actionscript) with the web directory where you want to host the .abc files.
+Replace location (/actionscript) with the web location where you want to host the .abc files.
 Copy the example helo.abc in that directory and point your browser to helo.abc file to see it in action.
