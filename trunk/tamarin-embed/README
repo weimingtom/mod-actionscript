@@ -1,0 +1,51 @@
+###############################
+### Author: Victor Dramba #####
+###############################
+
+
+Target platform
+-----------------------------------
+Debian or Ubuntu Linux
+
+
+-----------------------------------
+    Prerequisites
+-----------------------------------
+apt-get install zlib1g-dev
+apt-get install libapache2-mod-fcgid
+apt-get install libfcgi-dev
+apt-get install libmysqlclient15-dev
+
+
+-----------------------------------
+    Compilation
+-----------------------------------
+#get the source (if you don't have it already)
+svn checkout http://mod-actionscript.googlecode.com/svn/trunk/tamarin-embed
+#create obj dir
+cd tamarin-embed
+mkdir obj-debug
+cd obj-debug
+#configure (make sure all .py files have execution permission)
+../tamarin-central/configure.py --enable-shell --enable-debugger
+#compile
+make
+
+#the executable is obj-debug/shell/avmshell
+#copy the executable somewhere and rename it to tamarinfcgi
+
+
+-----------------------------------
+    Apache setup
+-----------------------------------
+Place tamarinfcgi somewhere (eg /home/youruser/bin/).
+Add this rule in your apache virtual host
+
+	<Location /actionscript>
+	    AddHandler fcgid-script .abc
+	    FCGIWrapper /home/youruser/bin/tamarinfcgi .abc
+	    Options +ExecCGI
+	</Location>
+
+Replace location (/actionscript) with the web directory where you want to host the .abc files.
+Copy the example helo.abc in that directory and point your browser to helo.abc file to see it in action.
