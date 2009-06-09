@@ -33,6 +33,8 @@ make
 
 #the executable is obj-debug/shell/avmshell
 #copy the executable somewhere and rename it to avmshell-fcgi
+
+IMPORTANT
 chmod a+x avmshell-fcgi
 
 
